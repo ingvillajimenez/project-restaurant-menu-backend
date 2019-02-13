@@ -27,6 +27,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.get('/', (request, response) => {
+    response.send({
+        message: 'Hello there'
+    });
+})
+
 app.use('/api/v1', api);
 
 app.listen(PORT, () => {
