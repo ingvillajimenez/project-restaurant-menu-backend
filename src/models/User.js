@@ -20,8 +20,8 @@ const userSchema = new ODM.Schema({
         required: true
     },
     restaurant: [{
-        type: String,
-        required: true
+        type: ODM.Schema.Types.ObjectId,
+        ref: 'Restaurant'
     }]
 })
 
